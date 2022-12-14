@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <AssemblyName>$(MSBuildProjectName.Replace("-dev", ""))</AssemblyName>
+        <RootNamespace>$(MSBuildProjectName.Replace("-dev", ""))</RootNamespace>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\MDD4All.FileAccess.Contracts\src\MDD4All.FileAccess.Contracts\MDD4All.FileAccess.Contracts-dev.csproj" />
+    </ItemGroup>
+
+</Project>
