@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using MDD4All.FileAccess.Contracts;
 using Microsoft.Win32;
@@ -48,7 +49,9 @@ namespace MDD4All.FileAccess.WPF
                 File.WriteAllBytes(filename, data);
             }
             catch (Exception exception)
-            { }
+            { 
+                Debug.WriteLine(exception.ToString());
+            }
         }
     }
 }
