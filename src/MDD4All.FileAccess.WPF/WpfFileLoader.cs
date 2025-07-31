@@ -24,12 +24,18 @@ namespace MDD4All.FileAccess.WPF
             return result;
         }
 
-        public bool ShowOpenFileDialog(out string selectedFilename, string defaultFielname = "", string defaultFileExtension = "", string filter = "All Files (*.*)|*.*")
+        public bool ShowOpenFileDialog(out string selectedFilename, 
+                                       string defaultFielname = "", 
+                                       string defaultFileExtension = "", 
+                                       string filter = "All Files (*.*)|*.*",
+                                       string title = "Open file...")
         {
             bool result = false;
             selectedFilename = null;
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Title = title;
 
             if (!string.IsNullOrEmpty(filter))
             {

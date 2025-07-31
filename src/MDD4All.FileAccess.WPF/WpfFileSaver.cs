@@ -8,12 +8,16 @@ namespace MDD4All.FileAccess.WPF
 {
     public class WpfFileSaver : IFileSaver
     {
-        public bool ShowFileSaveDialog(out string selectedFilename, string defaultFielname = "", string defaultFileExtension = "", string filter = "All Files (*.*)|*.*")
+        public bool ShowFileSaveDialog(out string selectedFilename, string defaultFielname = "", string defaultFileExtension = "", 
+                                       string filter = "All Files (*.*)|*.*",
+                                       string title = "Save file...")
         {
             bool result = false;
             selectedFilename = null;
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
+            
+            saveFileDialog.Title = title;
 
             if (!string.IsNullOrEmpty(filter))
             {
