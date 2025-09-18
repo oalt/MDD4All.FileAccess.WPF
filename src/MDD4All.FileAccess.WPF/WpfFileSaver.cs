@@ -27,7 +27,7 @@ namespace MDD4All.FileAccess.WPF
             {
                 saveFileDialog.FileName = defaultFielname;
             }
-            if(string.IsNullOrEmpty(defaultFileExtension))
+            if(!string.IsNullOrEmpty(defaultFileExtension))
             {
                 saveFileDialog.DefaultExt = defaultFileExtension;
             }
